@@ -1,0 +1,11 @@
+{
+    "vsintellicode.sql.completionsEnabled": false,
+    "codeium.enableSearch": "default",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggest.selectionMode": "never",
+    "vsintellicode.java.completionsEnabled": false,
+    "vsintellicode.python.completionsEnabled": false,
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
+    "vsintellicode.typescript.completionsEnabled": false,
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

@@ -1,0 +1,20 @@
+docker command to go display mysql db running inside docker container : docker exec -it 3a6be01919de mysql -u root -p
+docker ps - to list current running containers
+docker compose up -d : to start the container in detached mode
+docker compose down : to stop the container
+
+@Autowired, spring automatically injects required beans if a field, method is annotated with autowired. Autowired is required else 
+spring will throw exception.
+
+Spring cloud feign is used to sync communicate between different microservices. It provides a declarative interface to 
+specify client to be communicated then it automatically sends request, establishes, connection using http, paramter serialization
+, response deserialization and error handling, enabling seamless synchronous communication between microservices in a
+ Spring application.
+
+ API Gateway : 
+ 1. acts as an entry point for requests
+ 2. forwards requests to the downstream microservices.
+ 3. commonly used in the distributed systems and microservices architecture.
+
+
+ 

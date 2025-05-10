@@ -1,0 +1,14 @@
+Flow of Spring app:
+
+Startup: SpringApplication.run() is called.
+Environment Setup: Properties loaded, profiles activated.
+ApplicationContext Creation: The IoC container is initialized.
+Scanning: @ComponentScan finds user-defined @Component, @Service, etc. BeanDefinitions are created.
+Auto-Configuration: @EnableAutoConfiguration triggers evaluation of AutoConfiguration classes based on classpath and conditions.
+ More BeanDefinitions for default beans are created if conditions pass and beans aren't user-defined.
+Bean Instantiation & Wiring: The container creates bean instances from BeanDefinitions, injecting dependencies using 
+@Autowired via reflection.
+Proxy Creation: For beans requiring runtime aspects (@Transactional, etc.), proxies are created.
+Application Ready: The container is fully populated, and the application is running.
+Runtime: Incoming requests or scheduled tasks trigger method calls. Proxies intercept calls for relevant beans to apply 
+cross-cutting concerns (transactions, security, etc.) before/after delegating to the actual bean logic.

@@ -1,0 +1,28 @@
+The test flow is:
+Start MySQL container
+Start Spring Boot application
+For each test:
+Make API calls using RestAssured
+Verify responses
+Clean up by closing the container
+
+
+
+    Syntax:
+    The syntax of Rest Assured.io is the most beautiful part, as it is very BDD like and understandable.
+
+    Given(). 
+            param("x", "y"). 
+            header("z", "w").
+    when().
+    Method().
+    Then(). 
+            statusCode(XXX).
+            body("x, ”y", equalTo("z"));
+
+
+Code	Explanation
+Given()	‘Given’ keyword, lets you set a background, here, you pass the request headers, query and path param, body, cookies. This is optional if these items are not needed in the request
+When()	‘when’ keyword marks the premise of your scenario. For example, ‘when’ you get/post/put something, do something else.
+Method()	Substitute this with any of the CRUD operations(get/post/put/delete)
+Then()	Your assert and matcher conditions go here
